@@ -321,7 +321,22 @@ header .container nav form a{ /* Search styling*/
 
 
 
+ /* On small Screens */
 
+    @media (max-width: 900px) {
+    .about {
+        padding: 5px 0;
+    }
+
+    .about .container .home-content {
+        padding-top: 0;
+        margin-top: 2rem;
+    }
+    .about .container .home-content .text-content .scrollDown{
+      display: none;
+  }
+    
+}
 
 
 
@@ -1556,22 +1571,7 @@ padding-bottom: 35px;
 
 /* End Scroll Down  */
 
-   /* On small Screens */
-
-    @media (max-width: 900px) {
-    .about {
-        padding: 5px 0;
-    }
-
-    .about .container .home-content {
-        padding-top: 0;
-        margin-top: 2rem;
-    }
-    .about .container .home-content .text-content .scrollDown{
-      display: none;
-  }
-    
-}
+  
 /* End Part One */
 
 
@@ -2148,6 +2148,11 @@ footer strong{
 .done{
     display: block;
 }
+
+
+
+
+
 
 /* End Responsivity */
 
