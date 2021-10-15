@@ -1558,7 +1558,7 @@ padding-bottom: 35px;
 
    /* On small Screens */
 
-    @media (max-width: 768px) {
+    @media (max-width: 810px) {
     .about {
         padding: 5px 0;
     }
