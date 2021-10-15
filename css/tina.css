@@ -1556,7 +1556,22 @@ padding-bottom: 35px;
 
 /* End Scroll Down  */
 
+   /* On small Screens */
 
+    @media (max-width: 768px) {
+    .about {
+        padding: 5px 0;
+    }
+
+    .about .container .home-content {
+        padding-top: 0;
+        margin-top: 2rem;
+    }
+    .about .container .home-content .text-content .scrollDown{
+      display: none;
+  }
+    
+}
 /* End Part One */
 
 
