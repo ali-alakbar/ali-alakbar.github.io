@@ -1551,23 +1551,6 @@ padding-bottom: 35px;
 
 
 
- /* On small Screens */
-
-    @media (max-width: 900px) {
-    .about {
-        padding: 5px 0;
-    }
-
-    .about .container .home-content {
-        padding-top: 0;
-        margin-top: 2rem;
-    }
-    .about .container .home-content .text-content .scrollDown{
-      display: none;
-  }
-    
-}
-
 
 
 /* End Scroll Down  */
@@ -2117,6 +2100,30 @@ footer strong{
 
     }   
     
+    /* Hover on Show More Btn */
+.about .container .home-content .text-content .readMore-btn:hover {
+  background: unset;
+  border: solid var(--main-color);
+  color: unset;
+}
+.about .container .home-content .text-content .DownloadCV:hover {
+  background: unset;
+  border: solid var(--main-color);
+  color: unset;
+}
+
+    @media (max-width: 900px) {
+    .about {
+        padding: 5px 0;
+    }
+
+    .about .container .home-content {
+        padding-top: 0;
+        margin-top: 2rem;
+    }
+    .about .container .home-content .text-content .scrollDown{
+      display: none;
+  }
 
 }
 
