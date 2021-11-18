@@ -33,7 +33,6 @@ const more = document.querySelector(".more");
 // Calling The HTML Images As An Array
 const bo = document.querySelectorAll(".bo");
 
-console.log(bo);
 
 // Calling The HTML Element Where I Will Put the btn In
 const special_content = document.querySelector(".special-content");
@@ -60,58 +59,10 @@ more.addEventListener(
 
 // End Filtering The Pic
 
-// Start Changing Landing color
 
-// Calling body
-
-const body = document.querySelector("body");
-
-// Calling the colors Container.
-const bollet = document.querySelector(".bollet");
-
-console.log(bollet);
-const landing_content = document.querySelector(".landing-content");
-bollet.addEventListener(
-  "click",
-
-  (eo) => {
-    landing_content.style.transition = "all 0.5s ease";
-
-    switch (eo.target.className) {
-      case "red":
-        console.log("red");
-        body.classList.add("landing-red");
-        body.classList.remove("landing-blue");
-        body.classList.remove("landing-green");
-        body.classList.remove("landing-yellow");
-
-        break;
-      case "blue":
-        body.classList.remove("landing-red");
-        body.classList.remove("landing-green");
-        body.classList.remove("landing-yellow");
-        body.classList.add("landing-blue");
-
-        break;
-      case "green":
-        body.classList.remove("landing-blue");
-        body.classList.remove("landing-red");
-        body.classList.remove("landing-yellow");
-        body.classList.add("landing-green");
-
-        break;
-
-      default:
-        break;
-    }
-  }
-);
-
-// End Changing Landing color
 
 // Scrolling Effect On Navigation bar
 
-console.log(myUl);
 window.scroll(() => {
   if (this.scrollY > 20) {
     navi.style.background = "red";
@@ -125,14 +76,12 @@ window.scroll(() => {
 const readMoreBtn = document.querySelector(".readMore-btn");
 const text = document.querySelector(".text");
 
-console.log(text);
 
 readMoreBtn.addEventListener(
   "click",
 
   () => {
     text.classList.toggle("mio");
-    console.log("togleed");
 
     if (readMoreBtn.innerText == "Read More") {
       readMoreBtn.innerText = "Read Less";
@@ -170,7 +119,6 @@ const btn = document.querySelector(".submitting"); //Button
 let inputs = document.querySelectorAll("input"); //inputs
 
 
-    console.log(inputs);
 
 btn.addEventListener("click",    
 
@@ -225,3 +173,257 @@ btn.addEventListener("click",
 
 
 
+
+//  ===========================  Start Scrolling Effects  ===========================
+
+
+// Call the elements inside services section
+const sample = document.querySelectorAll(".sample");
+
+// Calling the image inside the design section
+const image = document.getElementById("myImg");
+
+// Calling elements inside the design section
+const elements = document.querySelector(".design_content");
+
+
+// Call the elements inside portfolio as an array
+const sections = document.querySelectorAll(".section");
+
+
+
+// Call the elements inside video section as an array
+const video = document.querySelectorAll(".forHidden");
+
+
+
+// Call the elements inside about section as an array(left side)
+const leftHidden = document.querySelectorAll(".sectionForHiddenleft");
+
+
+
+// Call the elements inside about section (right side)
+const rightHidden = document.querySelector(".sectionForHiddenright");
+
+
+// Call the elements inside about section 2
+const text_in_about = document.querySelector(".text-and-info");
+
+
+// Call the elements inside about section 2
+const img_in_about = document.querySelector(".imgAboutInfo");
+
+
+// Call the elements inside contact section
+const texts = document.querySelector(".hints");
+const myInputs = document.querySelector(".user-info");
+
+
+// Call element in footer section
+const myfooter = document.querySelector(".footerHidden");
+
+window.addEventListener(
+  "scroll",
+
+  () => {
+
+
+
+    sample.forEach((e) => {
+      if (window.pageYOffset >= 700) {
+        e.classList.add("active");
+      }
+    });
+  
+
+  if (window.pageYOffset >= 1600) {
+    
+    image.classList.add("active");
+  }
+
+
+  if (window.pageYOffset >= 1600) {
+    elements.classList.add("active2");
+  }
+
+    sections.forEach((e) => {
+      if (window.pageYOffset >= 2200) {
+        e.classList.add("active");
+      }
+    });
+
+
+      video.forEach((e) => {
+        if (window.pageYOffset >= 3000) {
+          e.classList.add("active");
+        }
+      });
+
+
+      leftHidden.forEach((e) => {
+        if (window.pageYOffset >= 3600) {
+          e.classList.add("active");
+        }
+      });
+
+  
+  if (window.pageYOffset >= 3600) {
+    rightHidden.classList.add("active2");
+  }
+
+  if (window.pageYOffset >= 4100) {
+    text_in_about.classList.add("active2");
+  }
+
+  if (window.pageYOffset >= 4100) {
+    img_in_about.classList.add("active");
+  }
+
+
+
+  if (window.pageYOffset >= 4800) {
+    myInputs.classList.add("active2");
+  }
+
+  if (window.pageYOffset >= 4800) {
+    texts.classList.add("active");
+  }
+
+
+  if (window.pageYOffset >= 5800) {
+    myfooter.classList.add("active");
+  }
+
+
+  }
+);
+
+//  ===========================  End Scrolling Effects  ===========================
+
+
+
+// =========================== Start Creating Slider ===========================
+
+// Call the images as an array and set a length
+let images = Array.from( document.querySelectorAll("#home .imgContainer div") );
+let imagesLength = images.length;
+
+// Set the Current Slide
+let currentSlide=1;
+
+// Call the left and right arrows
+let leftBtn = document.querySelector("#home .container #leftBtn");
+let rightBtn = document.querySelector("#home .container #rightBtn");
+
+let myUL = document.createElement("ul");
+myUL.setAttribute("class", "bollet");
+let colorContent = document.createElement("div");
+colorContent.setAttribute("class", "color-content");
+
+// ====== Start Creating custom <ul> bullets ======
+
+for (let i = 1; i <= imagesLength; i++) {
+  let myLI = document.createElement("li");
+  myLI.setAttribute('my-index',i)
+  myUL.appendChild(myLI);
+  colorContent.appendChild(myUL)
+  let homeSection = document.querySelector("#home .container");
+  homeSection.appendChild(colorContent);
+}
+
+// ====== End Creating custom <ul> bullets ======
+
+// Start Activate Next & Previous Buttons
+rightBtn.onclick = function () {
+  if (currentSlide == imagesLength) {
+    currentSlide=1;
+    check();
+
+}else{
+
+  currentSlide++;
+  check();
+
+};
+}
+
+leftBtn.onclick = function () {
+  if (currentSlide == 1) {
+    currentSlide = imagesLength;
+    check();
+  } else {
+    currentSlide--;
+    check();
+  }
+};
+// End Activate Next & Previous Buttons
+// Start Activate Click on bullets
+
+let myLI = Array.from(
+  document.querySelectorAll("#home .container .color-content ul li ")
+);
+
+for (let i = 0; i < myLI.length; i++) {
+  myLI[i].onclick = function () {
+    currentSlide = parseInt(this.getAttribute("my-index"));
+    check();
+  };
+}
+
+// End Activate Click on bullets
+// Start Automatical change for slide
+
+setInterval(() => {
+  
+  if (currentSlide == imagesLength) {
+    currentSlide=1;
+    check()
+  } else {
+    currentSlide++;
+    check();
+  }
+  
+}, 8500);
+
+
+// End Automatical change for slide
+// Start Functions
+// Create a Function To Set The Current Image and Bullet
+check();
+
+function check() {
+
+  remove();
+
+  // Current Image
+  images[ currentSlide - 1 ].classList.add('active')
+
+  // Current Bullet
+  let newUL = document.querySelector(
+    "#home .container .color-content ul "
+  );
+  newUL.children[ currentSlide -1 ].classList.add('active')
+}
+
+// Create A Removing Function 
+
+
+
+function remove() {
+  images.forEach( image => {
+    image.classList.remove('active')
+  });
+
+
+    var newLI = Array.from(
+      document.querySelectorAll("#home .container .color-content .bollet li")
+    );
+  newLI.forEach( bollet => {
+    bollet.classList.remove("active");
+  });
+}
+// End Functions
+
+
+
+// =========================== End Creating Slider ===========================
