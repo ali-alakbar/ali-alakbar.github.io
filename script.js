@@ -230,52 +230,52 @@ window.addEventListener(
 
 
     sample.forEach((e) => {
-      if (window.pageYOffset >= 700) {
+      if (window.pageYOffset >= 500) {
         e.classList.add("active");
       }
     });
   
 
-  if (window.pageYOffset >= 1600) {
+  if (window.pageYOffset >= 1400) {
     
     image.classList.add("active");
   }
 
 
-  if (window.pageYOffset >= 1600) {
+  if (window.pageYOffset >= 1400) {
     elements.classList.add("active2");
   }
 
     sections.forEach((e) => {
-      if (window.pageYOffset >= 2200) {
+      if (window.pageYOffset >= 2000) {
         e.classList.add("active");
       }
     });
 
 
       video.forEach((e) => {
-        if (window.pageYOffset >= 3000) {
+        if (window.pageYOffset >= 2700) {
           e.classList.add("active");
         }
       });
 
 
       leftHidden.forEach((e) => {
-        if (window.pageYOffset >= 3600) {
+        if (window.pageYOffset >= 3200) {
           e.classList.add("active");
         }
       });
 
   
-  if (window.pageYOffset >= 3600) {
+  if (window.pageYOffset >= 3200) {
     rightHidden.classList.add("active2");
   }
 
-  if (window.pageYOffset >= 4100) {
+  if (window.pageYOffset >= 3900) {
     text_in_about.classList.add("active2");
   }
 
-  if (window.pageYOffset >= 4100) {
+  if (window.pageYOffset >= 3900) {
     img_in_about.classList.add("active");
   }
 
