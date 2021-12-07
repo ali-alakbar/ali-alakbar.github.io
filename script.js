@@ -33,7 +33,6 @@ const more = document.querySelector(".more");
 // Calling The HTML Images As An Array
 const bo = document.querySelectorAll(".bo");
 
-
 // Calling The HTML Element Where I Will Put the btn In
 const special_content = document.querySelector(".special-content");
 
@@ -59,8 +58,6 @@ more.addEventListener(
 
 // End Filtering The Pic
 
-
-
 // Scrolling Effect On Navigation bar
 
 window.scroll(() => {
@@ -75,7 +72,6 @@ window.scroll(() => {
 
 const readMoreBtn = document.querySelector(".readMore-btn");
 const text = document.querySelector(".text");
-
 
 readMoreBtn.addEventListener(
   "click",
@@ -105,77 +101,42 @@ window.addEventListener("scroll", () => {
 
 // End Scroll up
 
-
-
-
-
 //  ===========================  Start PopUp Window  ===========================
-
-
-
-
 
 const btn = document.querySelector(".submitting"); //Button
 let inputs = document.querySelectorAll("input"); //inputs
 
+btn.addEventListener(
+  "click",
 
+  () => {
+    empty = 0;
 
-btn.addEventListener("click",    
+    for (var i = 0; i < inputs.length; ++i) {
+      if (inputs[i].value == "") {
+        ++empty;
+      }
+    }
+    if (empty !== 0 && empty !== inputs.length) {
+      alert("Please enter a value");
+    } else {
+      // Calling the pop Up Window (fade)
+      const fade = document.getElementById("myModal");
+      fade.style.display = "block";
 
-() => {
-    // eo.preventDefault();
+      // fade.classList.taggle="block";
 
+      // Calling button of pop up window
+      const click = document.querySelector(".click-me");
 
-        empty = 0;
-
-        for (var i = 0; i < inputs.length; ++i) {
-        if (inputs[i].value == "") {
-            ++empty;
-        }
-        }
-        if (empty !== 0 && empty !== inputs.length) {
-            alert("Please enter a value");
-        }
-        else{
-
-
-
-
-                // Calling the pop Up Window (fade)
-                const fade = document.getElementById("myModal");
-                fade.style.display = "block";
-
-                // fade.classList.taggle="block";
-
-                // Calling button of pop up window
-                const click = document.querySelector(".click-me");
-
-                click.addEventListener("click", () => {
-
-                    fade.style.display = "none";
-            });
-
-        }
-
-
-        
-
-
-    
-
-    
-
-
-    });
-
-
-
-
-
-
+      click.addEventListener("click", () => {
+        fade.style.display = "none";
+      });
+    }
+  }
+);
 
 //  ===========================  Start Scrolling Effects  ===========================
-
 
 // Call the elements inside services section
 const sample = document.querySelectorAll(".sample");
@@ -186,38 +147,27 @@ const image = document.getElementById("myImg");
 // Calling elements inside the design section
 const elements = document.querySelector(".design_content");
 
-
 // Call the elements inside portfolio as an array
 const sections = document.querySelectorAll(".section");
-
-
 
 // Call the elements inside video section as an array
 const video = document.querySelectorAll(".forHidden");
 
-
-
 // Call the elements inside about section as an array(left side)
 const leftHidden = document.querySelectorAll(".sectionForHiddenleft");
-
-
 
 // Call the elements inside about section (right side)
 const rightHidden = document.querySelector(".sectionForHiddenright");
 
-
 // Call the elements inside about section 2
 const text_in_about = document.querySelector(".text-and-info");
-
 
 // Call the elements inside about section 2
 const img_in_about = document.querySelector(".imgAboutInfo");
 
-
 // Call the elements inside contact section
 const texts = document.querySelector(".hints");
 const myInputs = document.querySelector(".user-info");
-
 
 // Call element in footer section
 const myfooter = document.querySelector(".footerHidden");
@@ -226,25 +176,19 @@ window.addEventListener(
   "scroll",
 
   () => {
-
-
-
     sample.forEach((e) => {
       if (window.pageYOffset >= 500) {
         e.classList.add("active");
       }
     });
-  
 
-  if (window.pageYOffset >= 1400) {
-    
-    image.classList.add("active");
-  }
+    if (window.pageYOffset >= 1400) {
+      image.classList.add("active");
+    }
 
-
-  if (window.pageYOffset >= 1400) {
-    elements.classList.add("active2");
-  }
+    if (window.pageYOffset >= 1400) {
+      elements.classList.add("active2");
+    }
 
     sections.forEach((e) => {
       if (window.pageYOffset >= 2000) {
@@ -252,64 +196,54 @@ window.addEventListener(
       }
     });
 
+    video.forEach((e) => {
+      if (window.pageYOffset >= 2700) {
+        e.classList.add("active");
+      }
+    });
 
-      video.forEach((e) => {
-        if (window.pageYOffset >= 2700) {
-          e.classList.add("active");
-        }
-      });
+    leftHidden.forEach((e) => {
+      if (window.pageYOffset >= 3200) {
+        e.classList.add("active");
+      }
+    });
 
+    if (window.pageYOffset >= 3200) {
+      rightHidden.classList.add("active2");
+    }
 
-      leftHidden.forEach((e) => {
-        if (window.pageYOffset >= 3200) {
-          e.classList.add("active");
-        }
-      });
+    if (window.pageYOffset >= 3900) {
+      text_in_about.classList.add("active2");
+    }
 
-  
-  if (window.pageYOffset >= 3200) {
-    rightHidden.classList.add("active2");
-  }
+    if (window.pageYOffset >= 3900) {
+      img_in_about.classList.add("active");
+    }
 
-  if (window.pageYOffset >= 3900) {
-    text_in_about.classList.add("active2");
-  }
+    if (window.pageYOffset >= 4800) {
+      myInputs.classList.add("active2");
+    }
 
-  if (window.pageYOffset >= 3900) {
-    img_in_about.classList.add("active");
-  }
+    if (window.pageYOffset >= 4800) {
+      texts.classList.add("active");
+    }
 
-
-
-  if (window.pageYOffset >= 4800) {
-    myInputs.classList.add("active2");
-  }
-
-  if (window.pageYOffset >= 4800) {
-    texts.classList.add("active");
-  }
-
-
-  if (window.pageYOffset >= 5800) {
-    myfooter.classList.add("active");
-  }
-
-
+    if (window.pageYOffset >= 5800) {
+      myfooter.classList.add("active");
+    }
   }
 );
 
 //  ===========================  End Scrolling Effects  ===========================
 
-
-
 // =========================== Start Creating Slider ===========================
 
 // Call the images as an array and set a length
-let images = Array.from( document.querySelectorAll("#home .imgContainer div") );
+let images = Array.from(document.querySelectorAll("#home .imgContainer div"));
 let imagesLength = images.length;
 
 // Set the Current Slide
-let currentSlide=1;
+let currentSlide = 1;
 
 // Call the left and right arrows
 let leftBtn = document.querySelector("#home .container #leftBtn");
@@ -324,9 +258,9 @@ colorContent.setAttribute("class", "color-content");
 
 for (let i = 1; i <= imagesLength; i++) {
   let myLI = document.createElement("li");
-  myLI.setAttribute('my-index',i)
+  myLI.setAttribute("my-index", i);
   myUL.appendChild(myLI);
-  colorContent.appendChild(myUL)
+  colorContent.appendChild(myUL);
   let homeSection = document.querySelector("#home .container");
   homeSection.appendChild(colorContent);
 }
@@ -336,16 +270,13 @@ for (let i = 1; i <= imagesLength; i++) {
 // Start Activate Next & Previous Buttons
 rightBtn.onclick = function () {
   if (currentSlide == imagesLength) {
-    currentSlide=1;
+    currentSlide = 1;
     check();
-
-}else{
-
-  currentSlide++;
-  check();
-
+  } else {
+    currentSlide++;
+    check();
+  }
 };
-}
 
 leftBtn.onclick = function () {
   if (currentSlide == 1) {
@@ -374,17 +305,14 @@ for (let i = 0; i < myLI.length; i++) {
 // Start Automatical change for slide
 
 setInterval(() => {
-  
   if (currentSlide == imagesLength) {
-    currentSlide=1;
-    check()
+    currentSlide = 1;
+    check();
   } else {
     currentSlide++;
     check();
   }
-  
 }, 8500);
-
 
 // End Automatical change for slide
 // Start Functions
@@ -392,38 +320,30 @@ setInterval(() => {
 check();
 
 function check() {
-
   remove();
 
   // Current Image
-  images[ currentSlide - 1 ].classList.add('active')
+  images[currentSlide - 1].classList.add("active");
 
   // Current Bullet
-  let newUL = document.querySelector(
-    "#home .container .color-content ul "
-  );
-  newUL.children[ currentSlide -1 ].classList.add('active')
+  let newUL = document.querySelector("#home .container .color-content ul ");
+  newUL.children[currentSlide - 1].classList.add("active");
 }
 
-// Create A Removing Function 
-
-
+// Create A Removing Function
 
 function remove() {
-  images.forEach( image => {
-    image.classList.remove('active')
+  images.forEach((image) => {
+    image.classList.remove("active");
   });
 
-
-    var newLI = Array.from(
-      document.querySelectorAll("#home .container .color-content .bollet li")
-    );
-  newLI.forEach( bollet => {
+  var newLI = Array.from(
+    document.querySelectorAll("#home .container .color-content .bollet li")
+  );
+  newLI.forEach((bollet) => {
     bollet.classList.remove("active");
   });
 }
 // End Functions
-
-
 
 // =========================== End Creating Slider ===========================
