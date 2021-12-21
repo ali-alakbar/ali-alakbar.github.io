@@ -94,7 +94,7 @@
 
 //  ==================   End Quote  ====================
 
-// =================== Start New Release ===================
+// =================== Start Techs ===================
 .tech-i-know {
   margin-bottom: 10rem;
   .container {
@@ -191,4 +191,50 @@
     }
   }
 }
-// =================== End New Release ===================
+
+@media (max-width: 768px) {
+  .tech-i-know {
+    margin-bottom: 0;
+    .container {
+      margin-left: 0;
+      .swiper-wrapper {
+        position: relative;
+        top: -85px;
+        .swiper-slide {
+          width: 124.7px !important;
+          height: 10vh;
+          margin-right: 3px;
+          .imgContainer {
+            img {
+              width: 33%;
+              opacity: 1;
+            }
+            #git {
+              width: 60% !important;
+            }
+            #react {
+              width: 35%;
+            }
+          }
+        }
+      }
+
+      .right {
+        right: -3px;
+      }
+      .left {
+        left: 0;
+      }
+      .left,
+      .right {
+        top: 31.3%;
+        opacity: 0.5;
+
+        &::after {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+// =================== End Techs ===================
