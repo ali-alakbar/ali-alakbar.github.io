@@ -1,129 +1,194 @@
 @import url(tina.css);
 
-
-
-
 // ============ Start About Part Two ============
 
+#about-partTwo {
+  .information {
+    .skill {
+      margin-bottom: 2rem;
+      h4 {
+        color: #000;
+        font-weight: normal;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+      .skill-rate {
+        background: #dedadc;
+        height: 5vh;
 
-#about-partTwo{
-
-    .information{
-
-        .skill{
-            margin-bottom: 2rem;
-            h4{
-            color: #000 ; 
-            font-weight: normal;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            }
-            .skill-rate{
-            background: #dedadc;
-            height: 5vh;
-            
-
-
-            span{
-                height: 100%;
-                display: block;
-                background: var(--main-color);
-                position: relative;
-                &::after{
-                content: "";
-                position: absolute;
-                border-style: solid;
-                border-width: 8px;
-                border-color: black transparent transparent;
-                right: -8px;
-                top: -15px;
-            }
-            &::before{
-                content: attr(data-progress);
-                position: absolute;
-                background-color: black;
-                color: white;
-                top: -39px;
-                right: -18px;
-                padding: 4px 0;
-                width: 40px;
-                text-align: center;
-                border-radius: 4px;
-            }
-            }
-            .html{
-                width: 90%;
-
-                
-            
-            }
-            .css{
-                width: 70%;
-
-
-            }
-            .js{
-                width: 80%;
-
-
-            }
-            .sass{
-                width: 70%;
-
-            }
-
-
+        span {
+          height: 100%;
+          display: block;
+          background: var(--main-color);
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            border-style: solid;
+            border-width: 8px;
+            border-color: black transparent transparent;
+            right: -8px;
+            top: -15px;
+          }
+          &::before {
+            content: attr(data-progress);
+            position: absolute;
+            background-color: black;
+            color: white;
+            top: -39px;
+            right: -18px;
+            padding: 4px 0;
+            width: 40px;
+            text-align: center;
+            border-radius: 4px;
+          }
         }
-        
+        .html {
+          width: 90%;
+        }
+        .css {
+          width: 70%;
+        }
+        .js {
+          width: 80%;
+        }
+        .sass {
+          width: 70%;
+        }
+      }
     }
-        
-
-    }
+  }
 }
 
+//  ==================   Start Quote  ====================
 
+.quote {
+  position: relative;
+  background-image: url(../imgs/Web.jpg);
+  background-size: cover;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  text-align: center;
+  color: white;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    right: 0;
+  }
 
-
-
-//  ==================   Start Quote  ==================== 
-
-.quote{
+  q {
+    font-size: 30px;
     position: relative;
-    background-image: url(../imgs/Web.jpg);
-    background-size: cover;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-    text-align: center;
-    color: white;
-    &::before{
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.7);
-        top: 0;
-        right: 0;
-
-    }
-
-    q{
-        font-size: 30px;
-        position: relative;
-        margin-bottom: 3rem;
-        display: block;
-    }
-    span{
-        position: relative;
-        display: block;
-    }
+    margin-bottom: 3rem;
+    display: block;
+  }
+  span {
+    position: relative;
+    display: block;
+  }
 }
 
+//  ==================   End Quote  ====================
 
+// =================== Start New Release ===================
+.tech-i-know {
+  margin-bottom: 10rem;
+  .container {
+    margin-left: 50px;
 
+    .special-content {
+      text-align: center;
+      color: rgb(51, 51, 51);
+      h2 {
+        font-weight: normal;
+        position: relative;
+        margin-bottom: 50px;
+        font-size: 40px;
+        text-transform: uppercase;
+        text-align: center;
 
+        &::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          transform: var(--main-translateX);
+          height: 2px;
+          background-color: #333;
+          bottom: -30px;
+          width: 120px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          transform: var(--main-translateX);
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+          border: 2px solid #333;
+          bottom: -38px;
+          background-color: var(--main-white);
+        }
+      }
+      p {
+        display: inline-block;
+        max-width: 100%;
+        width: 60%;
+        color: #777;
+        line-height: 1.8;
+      }
+    }
 
+    .swiper-wrapper {
+      display: grid;
+      grid-auto-flow: column;
+      height: 50vh;
+      align-items: center;
+      transition: all 1s ease-in-out;
+      .swiper-slide {
+        position: relative;
+        width: 380px !important;
+        height: 27vh;
+        margin-right: 26px;
+        transition: all 0.5s ease-in-out;
+        text-align: center;
 
+        &:hover {
+          transform: scale(1.2);
+          z-index: 2;
+          .imgContainer {
+            img {
+              opacity: 1;
+            }
+          }
+        }
 
+        .imgContainer {
+          height: 100%;
 
-//  ==================   End Quote  ==================== 
-
+          img {
+            transition: var(--main-transition);
+            position: relative;
+            top: 30%;
+            width: 20%;
+            opacity: 0.5;
+          }
+          #git {
+            width: 40% !important;
+          }
+          #react {
+            width: 25%;
+          }
+          #java {
+            top: 15%;
+          }
+        }
+      }
+    }
+  }
+}
+// =================== End New Release ===================
