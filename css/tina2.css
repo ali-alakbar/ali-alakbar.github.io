@@ -92,4 +92,117 @@
   position: relative;
   display: block;
 }
+
+.tech-i-know {
+  margin-bottom: 10rem;
+}
+
+.tech-i-know .container {
+  margin-left: 50px;
+}
+
+.tech-i-know .container .special-content {
+  text-align: center;
+  color: #333333;
+}
+
+.tech-i-know .container .special-content h2 {
+  font-weight: normal;
+  position: relative;
+  margin-bottom: 50px;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.tech-i-know .container .special-content h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: var(--main-translateX);
+          transform: var(--main-translateX);
+  height: 2px;
+  background-color: #333;
+  bottom: -30px;
+  width: 120px;
+}
+
+.tech-i-know .container .special-content h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: var(--main-translateX);
+          transform: var(--main-translateX);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  bottom: -38px;
+  background-color: var(--main-white);
+}
+
+.tech-i-know .container .special-content p {
+  display: inline-block;
+  max-width: 100%;
+  width: 60%;
+  color: #777;
+  line-height: 1.8;
+}
+
+.tech-i-know .container .swiper-wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  height: 50vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.tech-i-know .container .swiper-wrapper .swiper-slide {
+  position: relative;
+  width: 380px !important;
+  height: 27vh;
+  margin-right: 26px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+}
+
+.tech-i-know .container .swiper-wrapper .swiper-slide:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  z-index: 2;
+}
+
+.tech-i-know .container .swiper-wrapper .swiper-slide:hover .imgContainer img {
+  opacity: 1;
+}
+
+.tech-i-know .container .swiper-wrapper .swiper-slide .imgContainer {
+  height: 100%;
+}
+
+.tech-i-know .container .swiper-wrapper .swiper-slide .imgContainer img {
+  -webkit-transition: var(--main-transition);
+  transition: var(--main-transition);
+  position: relative;
+  top: 30%;
+  width: 20%;
+  opacity: 0.5;
+}
+
+.tech-i-know .container .swiper-wrapper .swiper-slide .imgContainer #git {
+  width: 40% !important;
+}
+
+.tech-i-know .container .swiper-wrapper .swiper-slide .imgContainer #react {
+  width: 25%;
+}
+
+.tech-i-know .container .swiper-wrapper .swiper-slide .imgContainer #java {
+  top: 15%;
+}
 /*# sourceMappingURL=tina2.css.map */
