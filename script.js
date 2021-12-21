@@ -123,12 +123,8 @@ btn.addEventListener(
       // Calling the pop Up Window (fade)
       const fade = document.getElementById("myModal");
       fade.style.display = "block";
-
-      // fade.classList.taggle="block";
-
       // Calling button of pop up window
       const click = document.querySelector(".click-me");
-
       click.addEventListener("click", () => {
         fade.style.display = "none";
       });
@@ -182,16 +178,16 @@ window.addEventListener(
       }
     });
 
-    if (window.pageYOffset >= 1400) {
+    if (window.pageYOffset >= 1200) {
       image.classList.add("active");
     }
 
-    if (window.pageYOffset >= 1400) {
+    if (window.pageYOffset >= 1200) {
       elements.classList.add("active2");
     }
 
     sections.forEach((e) => {
-      if (window.pageYOffset >= 2000) {
+      if (window.pageYOffset >= 1800) {
         e.classList.add("active");
       }
     });
@@ -347,3 +343,47 @@ function remove() {
 // End Functions
 
 // =========================== End Creating Slider ===========================
+
+
+
+
+
+
+// =========================== Start swiper Slider ===========================
+// Calling The Images Length
+let swiperImgLength = document.querySelectorAll('.swiper-slide img').length
+console.log(swiperImgLength); 
+
+
+// =========================== End swiper Slider ===========================
+
+// ===========================
+// Start Sending an Email
+// ===========================
+
+function send(e) {
+
+  emailjs.send("newOne","template_yopdssl",{
+    // Calling the message input's value
+    message: document.getElementById('message').value,
+    // Calling the first name input's value
+    first_Name: document.getElementById('first_Name').value,
+    // Calling the last name input's value
+    Last_Name: document.getElementById('Last_Name').value,
+    // Calling the email input's value
+    user_email: document.getElementById('user_email').value.toUpperCase(),
+  }).then(
+    (response) => {
+      console.log("Success" , response.status);
+    }, 
+    (error) => {
+      console.log(error);
+    })
+}
+
+
+document.querySelector('#sendMsg').addEventListener('click', send)
+
+// ===========================
+// End Sending an Email
+// ===========================
