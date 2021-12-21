@@ -25,6 +25,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
+<!-- Swiper Slider Link (CSS/JS) -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
 
     <!-- Main Css File -->
     <link rel="stylesheet" href="css/tina2.css">
@@ -94,7 +98,7 @@
                 <h1>Hello
                     <br>I'm Ali-Akbar I Make <span>Websites</span>
                 </h1>
-                <p>I creat websites that users love to see. I am a passionate and creative frontend developer with experiences in interfaces
+                <p>I create websites that users love to see. I am a passionate and creative frontend developer with experiences in interfaces
                 for both web and mobile.</p>
                 <a href="#about">See My Story</a>
             </div>
@@ -147,14 +151,14 @@
                 </div>
 
 
-                <div class="sample">
+                <!-- <div class="sample">
                     <i class="fas fa-pencil-ruler fa-3x"></i>
                     <div class="content">
                         <h3>Advertising</h3>
                         <p>Sequi unde sunt temporibus praesentium illum quis, nostrum voluptas debitis harum at vitae
                             distinctio, libero voluptate tempore est voluptates earum!</p>
                     </div>
-                </div>
+                </div> -->
 
 
 
@@ -256,6 +260,15 @@
                         <div class="caption">
                             <h4>Template One</h4>
                             <a href="https://ali-alakbar.github.io/Tamp_1/"><p>Click Here</p></a> 
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="imgs/style.jpg" alt="">
+                        <div class="caption">
+                            <h4>Ecommerce Website</h4>
+                            <a href="https://ali-alakbar.github.io/E-commerce-WebPage/">
+                                <p>Click Here</p>
+                            </a>
                         </div>
                     </div>
                     
@@ -368,10 +381,10 @@
         </video>
 
 
-        <div class="content">
+        <form class="content">
             <h3 class="forHidden">Send me a review</h3>
-            <button class="forHidden" type="button">Click Here</button>
-        </div>
+            <a class="forHidden" href="#contact">Click Here</a>
+        </form>
 
 
 
@@ -398,6 +411,10 @@
 
 
         <div class="container">
+            <div class="special-content">
+                <h2>About Me</h2>
+                <p>My Introduction</p>
+            </div>
 
             <div class="home-content">
 
@@ -433,16 +450,17 @@
                     <p class="text">I am a digital agency that builds immersive user experince.
                         I create an exceptional visualization and thought-out functionality.
                         <span class="moreText">I believe, my clients deserve to have remarkable interfaces for their
-                            business, and I'm here to help them.
-                            The products develped are appreciated all around the world. </span>
+                            business, and I'm here to help them out.
+                            <!--The products develped are appreciated all around the world.  -->
+                        </span>
                     </p>
 
 
 
                     <button type="button" class="readMore-btn">Read More</button>
 
-                    <button class="DownloadCV" type="button">Download CV <i
-                            class="fas fa-download downloadIcon"></i></button>
+                    <a class="DownloadCV" download href="Vocablaury.odt">Download CV <i
+                            class="fas fa-download downloadIcon"></i></a>
 
                     <div class="scrollDown">
 
@@ -483,12 +501,6 @@
     <section id="about-partTwo" class="about-info">
         <div class="container">
 
-            <div class="special-content">
-                <h2>About Me</h2>
-                <p>My Introduction</p>
-            </div>
-
-
 
 
             <div class="more-content">
@@ -499,8 +511,9 @@
                 </div>
 
                 <div class="text-and-info">
-                    <p class="devInfo">Web developer, with extensive knowledge and expeirnce, working in web
-                        technologies and UI/UX design, delevering quality work.</p>
+                    <p class="devInfo">Web developer, with extensive knowledge and experience, 
+                        working in web technologies and UI/UX design, delivering quality work.
+                </p>
 
 
 
@@ -549,6 +562,70 @@
     </section>
 
     <!--==================  End About us    ======================== -->
+
+
+<!-- ================== Start Technologies ======================== -->
+<section class="tech-i-know">
+    <div class="container">
+        <div class="special-content">
+            <h2>Technologies</h2>
+            <p>Range of Technologies That I Use</p>
+        </div>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev arrow left"></div>
+            <div class="swiper-button-next arrow right"></div>
+
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
+                <!-- Slides -->
+                <div class="slide swiper-slide">
+                    <div class="imgContainer"><img src="imgs/HTMLLogo.jpg" alt=""></div>
+                </div>
+                <!-- --------------- -->
+                <div class="swiper-slide slide">
+                    <div class="imgContainer"><img src="imgs/CSSLogo.jpg" alt=""></div>
+                </div>
+                <!-- --------------- -->
+                <div class="swiper-slide slide">
+                    <div class="imgContainer"><img src="imgs/JSLogo.jpg" alt=""></div>
+                </div>
+                <!-- --------------- -->
+                <div class="swiper-slide slide">
+                    <div class="imgContainer"><img src="imgs/pythonLogo.png" alt=""></div>
+                </div>
+                <!-- --------------- -->
+                <div class="swiper-slide slide">
+                    <div class="imgContainer"><img id="java" src="imgs/JavaLogo.png" alt=""></div>
+                </div>
+                <!-- --------------- -->
+                <div class="swiper-slide slide">
+                    <div class="imgContainer"><img src="imgs/sass.jpg" alt=""></div>
+                </div>
+                <!-- --------------- -->
+                <div class="swiper-slide slide">
+                    <div class="imgContainer"><img src="imgs/bootStrapLogo.jpg" alt=""></div>
+                </div>
+                <!-- --------------- -->
+                <div class="swiper-slide slide">
+                    <div class="imgContainer"><img id="git" src="imgs/git.png" alt=""></div>
+                </div>
+                <!-- --------------- -->
+                <div class="swiper-slide slide">
+                    <div class="imgContainer"><img id="react" src="imgs/react.png.png" alt=""></div>
+                </div>
+                <!-- --------------- -->
+
+            </div>
+
+
+
+    </div>
+</section>
+
+<!-- ================== End Technologies ======================== -->
 
 <!-- ==================   Start Quote  ==================== -->
 
@@ -615,26 +692,31 @@
 
 
 
-            <form class="user-info">
+            <form 
+            class="user-info"
+            action="MAILTO:ali2akbar5@gmail.com" 
+            method="post"
+            enctype="text/plain" 
+            
+            >
                 <p class="note">
                     Note: All Fields Are Required
                 </p>
                 <div>
-                    <label for="fname">First name:</label><br>
-                    <input class="name" required type="text">
+                    <label >First name:</label><br>
+                    <input id="first_Name" class="name" required type="text">
                 </div>
                 <div>
-                    <label for="fname">Last name:</label><br>
-                    <input required type="text">
+                    <label >Last name:</label><br>
+                    <input id="Last_Name" required type="text">
                 </div>
                 <div>
-                    <label for="fname">Email:</label><br>
-                    <input required type="email" name="email">
+                    <label >Email:</label><br>
+                    <input id="user_email"  required type="email" name="email">
                 </div>
-
                 <div>
-                    <label for="fname">Write:</label><br>
-                    <textarea required="required" name="comment" form="usrform"></textarea>
+                    <label>Write:</label><br>
+                    <textarea id="message"  required="required" name="comment" form="usrform"></textarea>
                 </div>
 
 
@@ -648,7 +730,7 @@
                 <!-- Ask For Gender End -->
 
                 <div class="send">
-                    <button class="submitting" type="button" value="Send">Send</button>
+                    <button id="sendMsg" class="submitting" type="button" value="Send">Send</button>
                     <button type="reset">Reset</button>
                 </div>
 
@@ -698,12 +780,10 @@
 
         <div class="special-content footerHidden">
 
-            <h2>We Are Online</h2>
+            <h2>I Am Online</h2>
             <p>Get In Touch</p>
             <span>
-                +00 123.456.789
-                <br>
-                +00 123.456.789
+                +9647722278864
             </span>
 
         </div>
@@ -750,6 +830,49 @@
 </section>
 
 <!-- ===========================  End PopUp window  =========================== -->
+
+
+
+
+
+
+
+
+
+
+<script>
+    let myLogos = document.querySelectorAll('.slide').length;
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        slidesPerView: 2.8,
+        loop: true,
+
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    });
+
+
+
+</script>
+
+
+
+
+
+<!-- Start Email JS Files -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init("user_yMxISv31B1hFjS6wSFNJ1");
+    })();
+</script>
+<!-- End Email JS Files -->
+
+
 
 </body>
 
