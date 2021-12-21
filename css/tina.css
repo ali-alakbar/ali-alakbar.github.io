@@ -55,6 +55,7 @@ body {
   .container {
     width: 1170px;
   }
+
 }
 
 /* End Screen Responsive */
@@ -232,70 +233,61 @@ header .container nav form a {
 }
 
 /* For landing Arrows */
-.landing .container .fas{
+.landing .container .fas {
   position: absolute;
   top: 50%;
   color: #ddd;
   transition: var(--main-transition);
-  opacity: 0;  
+  opacity: 0;
   cursor: pointer;
 }
-.landing:hover .container .fas{
+.landing:hover .container .fas {
   opacity: 1;
 }
 
-
-
-.landing .container .left{left: 30px;}
-.landing .container .right{right: 30px;}
+.landing .container .left {
+  left: 30px;
+}
+.landing .container .right {
+  right: 30px;
+}
 
 .landing .container .imgContainer {
   width: 100vw;
   height: 100vh;
   max-width: 100%;
+}
 
-  }
+.landing .container .imgContainer .img {
+  background-size: cover;
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  transition: all 2s ease-in-out;
+}
+.landing .container .imgContainer .img1 {
+  background-image: url(../Coding_Images/pexels-mikhail-nilov-6963944.jpg);
 
+  opacity: 0;
+}
+.landing .container .imgContainer .img2 {
+  background-image: url(../Coding_Images/pexels-hitesh-choudhary-340152.jpg);
 
-  .landing .container .imgContainer .img{
+  opacity: 0;
+}
+.landing .container .imgContainer .img3 {
+  background-image: url(../Coding_Images/pexels-rodnae-productions-5922085.jpg);
 
-    background-size: cover;
-    height: 100vh;
-    position: absolute;
-    width: 100%;
-    transition: all 2s ease-in-out ;
-    
-  }
-  .landing .container .imgContainer .img1 {
+  opacity: 0;
+}
+.landing .container .imgContainer .img4 {
+  background-image: url(../Coding_Images/pexels-startup-stock-photos-7357.jpg);
 
-    background-image: url(../Coding_Images/pexels-mikhail-nilov-6963944.jpg);
-
-    opacity: 0;
-  }
-  .landing .container .imgContainer .img2 {
-
-    background-image: url(../Coding_Images/pexels-hitesh-choudhary-340152.jpg);
-
-    opacity: 0;
-  }
-    .landing .container .imgContainer .img3 {
-
-    background-image: url(../Coding_Images/pexels-rodnae-productions-5922085.jpg);
-
-    opacity: 0;
-  }
-      .landing .container .imgContainer .img4 {
-
-    background-image: url(../Coding_Images/pexels-startup-stock-photos-7357.jpg);
-
-    opacity: 0;
-  }
-  .landing .container .imgContainer .active{
-    opacity: 40%;
-  }
-
-
-
+  opacity: 0;
+}
+.landing .container .imgContainer .active {
+  opacity: 40%;
+}
 
 .landing .container::before {
   content: "";
@@ -324,7 +316,6 @@ header .container nav form a {
   color: var(--main-white);
 }
 
-
 .landing .container .landing-content p {
   font-size: 14px;
   line-height: 2;
@@ -340,8 +331,6 @@ header .container nav form a {
   line-height: 1.5;
   margin-bottom: 20px;
 }
-
-
 
 .landing .container .color-content {
   position: absolute;
@@ -364,7 +353,6 @@ header .container nav form a {
 .landing:hover .container .color-content .bollet {
   opacity: 1;
 }
-
 
 /* For landing bullets */
 .landing .container .bollet {
@@ -392,14 +380,12 @@ header .container nav form a {
   background-color: var(--main-color);
 }
 @media (max-width: 992px) {
-
   .landing .container .bollet li {
-  opacity: 1 ;
-  cursor: unset !important;
-}
+    opacity: 1;
+    cursor: unset !important;
+  }
 }
 @media (max-width: 768px) {
-
   .landing .container .landing-content {
     max-height: 100%;
 
@@ -408,8 +394,6 @@ header .container nav form a {
 
     background-color: rgba(15, 116, 143, 0.7);
   }
-
-
 }
 
 /* End Landing */
@@ -483,8 +467,6 @@ header .container nav form a {
   padding: 30px;
   opacity: 0;
   top: -80px;
-
-
 }
 .services .container .services-content .sample i {
   margin-right: 50px;
@@ -552,7 +534,6 @@ header .container nav form a {
   right: 0;
 }
 
-
 .design .design_content {
   padding-left: 50px;
   padding-top: 50px;
@@ -568,7 +549,6 @@ header .container nav form a {
   transform: var(--main-translateY);
   right: -300px;
   opacity: 0;
-
 }
 
 .design .design_content h3 {
@@ -668,8 +648,7 @@ header .container nav form a {
   line-height: 1.8;
 }
 
-
-.portfolio .section{
+.portfolio .section {
   padding: 30px;
   opacity: 0;
   top: -80px;
@@ -791,6 +770,7 @@ header .container nav form a {
 /* Start Video */
 .myVideo {
   position: relative;
+  margin-bottom: 5rem;
 }
 
 .myVideo video {
@@ -822,12 +802,11 @@ header .container nav form a {
   padding: 50px 0;
 }
 
-.myVideo .forHidden{
+.myVideo .forHidden {
   padding: 13px;
   opacity: 0;
   top: -80px;
 }
-
 
 @media (max-width: 668px) {
   .myVideo .content {
@@ -846,7 +825,7 @@ header .container nav form a {
   padding-bottom: 35px;
 }
 
-.myVideo .content button {
+.myVideo .content a {
   margin-bottom: 30px;
   padding: 6px 20px;
   background-color: var(--main-black);
@@ -854,9 +833,10 @@ header .container nav form a {
   color: rgba(255, 255, 255, 0.829);
   transition: var(--main-transition);
   cursor: pointer;
+  text-decoration: none;
 }
 
-.myVideo .content button:hover {
+.myVideo .content a:hover {
   color: var(--main-white);
   padding: 6px 25px;
 }
@@ -868,12 +848,60 @@ header .container nav form a {
   padding: 15px 0;
   margin: auto 0;
   overflow: hidden;
+  margin-bottom: 6rem;
+  padding-bottom: 3rem;
 }
+
+/* Start Special Content */
+.about .special-content {
+  text-align: center;
+  color: rgb(51, 51, 51);
+  /* margin-bottom: 50px; */
+}
+.about .special-content h2 {
+  font-weight: normal;
+  position: relative;
+  margin-bottom: 80px;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.about .special-content h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: var(--main-translateX);
+  height: 2px;
+  background-color: #333;
+  bottom: -30px;
+  width: 120px;
+}
+.about .special-content h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: var(--main-translateX);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  bottom: -38px;
+  background-color: var(--main-white);
+}
+
+.about .special-content p {
+  display: inline-block;
+  max-width: 100%;
+  width: 60%;
+  color: #777;
+  line-height: 1.8;
+}
+/* End Special Content */
 
 .about .container .home-content {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  padding-top: 3.2rem;
   margin-top: 3rem;
 }
 
@@ -884,20 +912,19 @@ header .container nav form a {
   transition: var(--main-transition);
 }
 
-.about .sectionForHiddenleft{
+.about .sectionForHiddenleft {
   left: -300px;
   position: relative;
   opacity: 0;
-
 }
 
-.about .sectionForHiddenright{
+.about .sectionForHiddenright {
   right: -300px;
   position: relative;
   opacity: 0;
 }
 
-.about .container .home-content .image-container{
+.about .container .home-content .image-container {
   width: 22rem;
 }
 .about .container .home-content .image-container img {
@@ -909,7 +936,6 @@ header .container nav form a {
 .about .container .home-content .social-media-icons {
   font-size: 25px;
 }
-
 
 .about .container .home-content .social-media-icons a {
   margin-bottom: 4rem;
@@ -981,7 +1007,7 @@ header .container nav form a {
 /* Custimizing button */
 .about .container .home-content .text-content .DownloadCV {
   border: solid var(--main-color);
-  padding: 10px 10px;
+  padding: 13px 10px;
   color: var(--main-white);
   background: var(--main-color);
   border-radius: 10px;
@@ -989,6 +1015,8 @@ header .container nav form a {
   cursor: pointer;
   display: block;
   margin-top: 2rem;
+  width: 35%;
+  text-decoration: none;
 }
 
 /* Hover on button */
@@ -1121,98 +1149,38 @@ header .container nav form a {
 
 /* End Scroll Down  */
 
-
 /* Start Part Two */
 
 .about-info {
-  margin-top: 5.2rem;
-  padding-top: 3rem;
-  margin-bottom: 10rem;
+  margin-bottom: 4rem !important;
   overflow: hidden;
 }
-
-/* Start Special Content */
-.about-info .special-content {
-  text-align: center;
-  color: rgb(51, 51, 51);
-  margin-bottom: 50px;
-}
-.about-info .special-content h2 {
-  font-weight: normal;
-  position: relative;
-  margin-bottom: 80px;
-  font-size: 40px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.about-info .special-content h2::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: var(--main-translateX);
-  height: 2px;
-  background-color: #333;
-  bottom: -30px;
-  width: 120px;
-}
-.about-info .special-content h2::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: var(--main-translateX);
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  border: 2px solid #333;
-  bottom: -38px;
-  background-color: var(--main-white);
-}
-
-.about-info .special-content p {
-  display: inline-block;
-  max-width: 100%;
-  width: 60%;
-  color: #777;
-  line-height: 1.8;
-}
-/* End Special Content */
 
 .about-info .more-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   column-gap: 50px;
-
 }
-
 
 .about-info .more-content .image-container {
-
-position: relative;
-left: -300px;
-opacity: 0;
-width: 22rem;
-
+  position: relative;
+  left: -300px;
+  opacity: 0;
+  width: 22rem;
 }
 
-.about-info .more-content .text-and-info{
-position: relative;
-right: -400px;
-opacity: 0;
-
-
+.about-info .more-content .text-and-info {
+  position: relative;
+  right: -400px;
+  opacity: 0;
 }
-
-
 
 .about-info .more-content .image-container img {
   width: 100%;
   height: 100%;
   border-radius: 20px;
 }
-
-
 
 .about-info .more-content .text-and-info .devInfo {
   line-height: 1.8;
@@ -1252,8 +1220,6 @@ opacity: 0;
     font-size: 17px;
     margin: 60px 0;
   }
-
-  
 }
 
 /* =====================  End About ME  ========================== */
@@ -1355,7 +1321,7 @@ footer strong {
 /* ========================End Scroll up ========================*/
 
 /* ===========================  Start contact  =========================== */
-.contact{
+.contact {
   overflow: hidden;
 }
 .contact .container {
@@ -1385,8 +1351,6 @@ footer strong {
   position: relative;
   right: -400px;
   opacity: 0;
-
-
 }
 .contact .container .detalis .user-info .note {
   margin-bottom: 2rem;
@@ -1455,7 +1419,7 @@ footer strong {
 .contact .container .detalis .hints:hover .social-media .facebook {
   color: #4267b2;
 }
-.contact .container .detalis .hints:hover .social-media  .twitter {
+.contact .container .detalis .hints:hover .social-media .twitter {
   color: #00acee;
 }
 
@@ -1486,10 +1450,9 @@ footer strong {
   .contact .container .detalis .hints .social-media .linkedin {
     color: #2867b2;
   }
-  .contact .container .detalis .hints .social-media  .twitter {
-  color: #00acee;
-}
-
+  .contact .container .detalis .hints .social-media .twitter {
+    color: #00acee;
+  }
 }
 
 /* ===========================  End contact  =========================== */
@@ -1506,6 +1469,8 @@ footer strong {
   max-height: 100%;
   max-width: 100%;
   display: none;
+  left: 0;
+  top: 0;
 }
 
 .fade .pop-container {
@@ -1587,7 +1552,7 @@ footer strong {
     font-size: 15px;
   }
 
-    .about {
+  .about {
     padding: 5px 0;
   }
 
@@ -1595,30 +1560,31 @@ footer strong {
     padding-top: 0;
     margin-top: 2rem;
   }
-  .about .container .home-content .text-content .scrollDown{
-      display: none;
+  .about .container .home-content .text-content .scrollDown {
+    display: none;
   }
 
+  /* Hover on Show More Btn */
+  .about .container .home-content .text-content .readMore-btn:hover {
+    background: unset;
+    border: solid var(--main-color);
+    color: unset;
+  }
+  .about .container .home-content .text-content .DownloadCV {
+    width: 55% !important;
+  }
 
-/* Hover on Show More Btn */
-.about .container .home-content .text-content .readMore-btn:hover {
-  background: unset;
-  border: solid var(--main-color);
-  color: unset;
-}
-.about .container .home-content .text-content .DownloadCV:hover {
-  background: unset;
-  border: solid var(--main-color);
-  color: unset;
-}
+  .about .container .home-content .text-content .DownloadCV:hover {
+    background: unset;
+    border: solid var(--main-color);
+    color: unset;
+  }
+
   .about .container .home-content .image-container,
   .about-info .more-content .image-container {
     width: initial;
   }
-
-
 }
-
 
 /* Medium Screens */
 @media (max-width: 414px) {
@@ -1635,6 +1601,18 @@ footer strong {
   }
 }
 
+/* Big  */
+@media (max-width: 1200px) {
+  .about .container .home-content .text-content .DownloadCV {
+    width: 40%;
+  }
+}
+@media (max-width: 1000px) {
+  .about .container .home-content .text-content .DownloadCV {
+    width: 75%;
+  }
+}
+
 .done {
   display: block;
 }
@@ -1646,28 +1624,18 @@ footer strong {
 
 /* ===========================  End Pop Up Done Icon  =========================== */
 
-
-
-
-
-
-
-
-
-
 /* ===========================  Start Scrolling Effects  =========================== */
-
 
 .services .active,
 .portfolio .active,
-.myVideo .active{
+.myVideo .active {
   opacity: 1 !important;
   transition: var(--main-transition2);
   position: relative;
   top: 0px !important;
 }
 
-footer .active{
+footer .active {
   opacity: 1 !important;
   transition: var(--main-transition2);
   position: relative;
@@ -1675,41 +1643,27 @@ footer .active{
 }
 
 /* For Design Section */
-.design .active{
+.design .active {
   opacity: 1 !important;
   left: 50% !important;
   transition: var(--main-transition2);
-  
 }
-
 
 .design .active2,
 .about .active2,
 .about-info .active2,
-.contact .active2{
-
-
-
+.contact .active2 {
   opacity: 1 !important;
   right: 0 !important;
   transition: var(--main-transition2);
-
 }
 
 .about .active,
 .about-info .active,
-.contact .active{
-
+.contact .active {
   opacity: 1 !important;
   left: 0 !important;
   transition: var(--main-transition2);
 }
 
-
 /* ===========================  End Scrolling Effects  =========================== */
-
-
-
-
-
-
