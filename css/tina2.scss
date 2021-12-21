@@ -206,8 +206,8 @@
           margin-right: 3px;
           .imgContainer {
             img {
-              width: 33%;
-              opacity: 1;
+              width: 33% !important;
+              opacity: 1 !important;
             }
             #git {
               width: 60% !important;
@@ -220,18 +220,18 @@
       }
 
       .right {
-        right: -3px;
+        right: -3px !important;
       }
       .left {
-        left: 0;
+        left: 0 !important;
       }
       .left,
       .right {
-        top: 31.3%;
-        opacity: 0.5;
+        top: 31.3% !important;
+        opacity: 0.5 !important;
 
         &::after {
-          font-size: 30px;
+          font-size: 30px !important;
         }
       }
     }
