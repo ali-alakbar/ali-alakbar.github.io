@@ -9,3 +9,4 @@ I created this website in attempt to make my personal resume to display my lates
 
 # Demo
 https://myakbar.com
+https://ali-alakbar.github.io/template-2/
