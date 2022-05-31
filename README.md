@@ -8,5 +8,5 @@ I created this website in attempt to make my personal resume to display my lates
 - Used swiper Slider to display the technologies I know and use
 
 # Demo
-https://myakbar.com
-https://ali-alakbar.github.io/template-2/
+- https://myakbar.com
+- https://ali-alakbar.github.io/template-2/
